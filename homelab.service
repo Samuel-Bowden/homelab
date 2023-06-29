@@ -1,0 +1,16 @@
+[Unit]
+Description=Homelab Homepage
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/sam/homelab/build/homelab
+WorkingDirectory=/home/sam/homelab
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
