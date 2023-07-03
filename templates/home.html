@@ -9,11 +9,17 @@
 		<title>Homelab - Samuel Bowden</title>
 	</head>
 	<body class="flex justify-center bg-orange-100 text-zinc-700 p-5">
-    <div class="max-w-lg w-full">
+    <div class="flex flex-col space-y-5 max-w-lg w-full">
       <h1 class="text-center text-3xl">Sam's Homelab</h1>
-      <p id="uptime" class="pt-5">{{uptime}}</p>
 
-      <h2 class="text-xl pt-5">Services</h2>
+      <form action="https://search.samuelbowden.com/search" class="grid justify-items-center">
+        <input placeholder="Search the web..." type="text" id="q" name="q" class="p-2" autofocus>
+      </form> 
+
+      <h2 class="text-xl">Status</h2>
+      <p id="uptime">{{uptime}}</p>
+
+      <h2 class="text-xl">Services</h2>
       <ul class="list-disc px-5">
         {{#services}}
         <li><a class="underline text-green-600" href="https://{{url_name}}.samuelbowden.com">{{name}} - {{status}}</a></li>
