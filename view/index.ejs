@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="tailwind.css">
+    <script src="main.js"></script> 
+    <title>Homelab - Samuel Bowden</title>
+  </head>
+  <body class="flex justify-center bg-orange-100 text-zinc-700 p-5">
+    <div class="flex flex-col space-y-5 max-w-lg w-full">
+      <h1 class="text-center text-3xl">Sam's Homelab</h1>
+
+      <form action="https://search.samuelbowden.com/search" class="grid justify-items-center">
+        <input placeholder="Search the web..." type="text" id="q" name="q" class="p-2" autofocus>
+      </form> 
+
+      <h2 class="text-xl">Status</h2>
+      <p id="uptime">Uptime: <%= uptime %></p>
+
+      <h2 class="text-xl">Control</h2>
+      <button id="suspend" class="max-w-min bg-white p-3" onclick="suspend()">Suspend</button> 
+
+      <h2 class="text-xl">Services</h2>
+      <ul class="list-disc px-5">
+        <% for(var i = 0; i < services.length; i++) {%>
+        <% let service = services[i] %>
+        <li><a class="underline text-green-600" href="https://<%= service.url_name %>.samuelbowden.com"><%= service.display %> - <%= service.status %></a></li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>

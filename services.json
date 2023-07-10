@@ -1,0 +1,27 @@
+[
+  {
+    "url_name": "git",
+    "display": "Git",
+    "name": "gitea"
+  },
+  {
+    "url_name": "invidious",
+    "display": "Invidious",
+    "name": "invidious"
+  },
+  {
+    "url_name": "search",
+    "display": "Search",
+    "name": "searxng"
+  },
+  {
+    "url_name": "music",
+    "display": "Music",
+    "name": "beatbump"
+  },
+  {
+    "url_name": "nodered",
+    "display": "Node Red",
+    "name": "nodered"
+  }
+]
